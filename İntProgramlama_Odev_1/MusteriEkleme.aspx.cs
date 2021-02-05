@@ -13,7 +13,10 @@ namespace İntProgramlama_Odev_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["KullaniciAdi"] == null)
+            {
+                Response.Redirect("~/KullaniciGirisKayit");
+            }
         }
 
         protected void MusteriEkleButton_Click(object sender, EventArgs e)
